@@ -6,8 +6,8 @@ Base 69 becuse cool kids only count in funny internet numbers
 ### Functions:
 **All base 69s will start with `69*|`**
 
-`encode_base69` Will return a string in base 69  
-`decode_base69` Will return a int
+`encode_base69_int` Will encode an integer and will return a string in base 69  
+`decode_base69_int` Will decode an integer in base69 and will return a int
 
 ## Support
  
@@ -19,7 +19,7 @@ Base 69 becuse cool kids only count in funny internet numbers
 ```py
 import base69
 
-result = base69.encode_base69(74)
+result = base69.encode_base69_int(74)
 print(result) # "69*|14"
 ```
 
@@ -27,17 +27,16 @@ print(result) # "69*|14"
 ```py
 import base69
 
-result = base69.decode_base69("69*|Df")
+result = base69.decode_base69_int("69*|Df")
 print(result) # 951
 ```
 
 **Error:**
 ```py
 # Providing invalid input will raise an exception
-
 import base69
 
-result = base69.decode_base69("6*| wm") # Traceback (most recent call last): ... InvalidInput: Invalid Base69 input! Base69 must begin '69*|'
+result = base69.decode_base69_int("6*| wm") # Traceback (most recent call last): ... InvalidInput: Invalid Base69 input! Base69 must begin '69*|'
 ```
 
 ```py
@@ -45,7 +44,7 @@ result = base69.decode_base69("6*| wm") # Traceback (most recent call last): ...
 import base69
 
 try:
-    result = base69.decode_base69("6*| wm")
+    result = base69.decode_base69_int("6*| wm")
 except base69.InvalidInput:
     print("not cool man, thats just not valid")
 ```
