@@ -20,7 +20,7 @@ tests = {
 
 # this file more useful when used with pytest
 for number, _base69 in tests.items():
-    assert base69.encode_base69(number) == _base69
-    assert base69.decode_base69(_base69) == number
+    assert base69.encode_base69_int(number) == _base69
+    assert base69.decode_base69_int(_base69) == number
 
 print("All tests were successful!")
